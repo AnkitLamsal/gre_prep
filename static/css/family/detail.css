@@ -1,0 +1,15 @@
+.word-family{
+    padding:1rem;
+    margin:1rem;
+}
+.words{
+    padding:1rem;
+    margin:1rem;
+}
+.word-row{
+    padding: 0.5rem;
+}
+.col{
+    font-size: 1.3rem;
+    border-bottom:1px solid #123456;
+}

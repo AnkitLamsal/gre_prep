@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% if user.is_authenticated %}
+<h1>Welcome to Vocabulary App</h1>
+<a href="{% url 'vocabulary:family-create'%}">Create Family</a><br>
+<a href="{% url 'vocabulary:family-list'%}">Family List</a><br>
+<a href="{% url 'vocabulary:word-create'%}">Add Words</a><br>
+<a href="{% url 'vocabulary:word-list'%}">Word Lists</a><br>
+<a href="{% url 'vocabulary:positive-connotation-list'%}">Positive Connotations</a><br>
+<a href="{% url 'vocabulary:negative-connotation-list'%}">Negative Connotations</a><br>
+<a href="{% url 'vocabulary:neutral-connotation-list'%}">Neutral Connotations</a><br>
+<a href="{% url 'vocabulary:logout'%}">Logout</a><br>
+{% else %}
+<a href="{% url 'vocabulary:login'%}">Login</a><br>
+{% endif %}
+{% endblock %}

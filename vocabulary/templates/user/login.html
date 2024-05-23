@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}
+<link rel="stylesheet" href="{% static 'css/user/index.css' %}">
+<link rel="stylesheet" href="{% static 'css/user/create_user.css'%}" media="screen and (min-width: 200px) and (max-width: 800px)">
+<title>Add Word</title>
+{% endblock %}
+{% block content %}
+        <div class="title">
+            <h1>Login</h1>
+        </div>
+        <div class="form">
+            <form method="POST" class="d-flex flex-column">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div id="search-bar"></div>
+                <button type="submit" class="btn btn-primary" id="submit-btn">Submit</button>
+            </form>
+        </div>
+{% endblock %}

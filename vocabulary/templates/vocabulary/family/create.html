@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}
+    <title>Create Family</title>
+    <link rel="stylesheet" href="{% static 'css/family/create.css'%}">
+    <link rel="stylesheet" href="{% static 'css/family/responsive_create.css'%}" media="screen and (min-width: 200px) and (max-width: 800px)">
+{% endblock %}
+{% block content %}
+        <div class="title">
+            <h1>Create a word family</h1>
+        </div>
+        <div class="form">
+            <form method="POST" class="form-family d-flex flex-column">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div id="select"></div>
+                <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+            </form>
+        </div>
+{% endblock %}

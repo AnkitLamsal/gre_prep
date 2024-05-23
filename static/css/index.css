@@ -1,0 +1,19 @@
+#div_id_name, #div_id_connotation, #div_id_family, #search-bar, #div_id_definition{
+    padding: 1rem;
+    margin-left:25% !important;
+}
+input , #id_connotation{
+    padding:0.3rem;
+
+}
+.form{
+    padding:2rem;
+}
+#submit-btn{
+    padding: 0.5rem;
+    width:50%;
+    margin-left:25%;
+}
+#search-field{
+    margin: 1rem;
+}

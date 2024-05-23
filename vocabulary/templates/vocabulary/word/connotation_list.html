@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title%}
+<title>Word Family Detail</title>
+<link rel="stylesheet" href="{% static 'css/family/detail.css'%}">
+<link rel="stylesheet" href="{% static 'css/word/connotation_mobile.css'%}" media="screen and (min-width: 200px) and (max-width: 800px)">
+{% endblock %}
+{% block content %}
+    <h1>Word List</h1>
+    <div class="word-family">
+        <div class="words">
+            <h3>Connotation Words</h3>
+            <div class="word-row d-flex">
+                <div class="col col-1">SN</div>
+                <div class="col col-2">Word</div>
+                <div class="col col-3">Family</div>
+                <div class="col col-4">Deifinition</div>
+            </div>        
+                {% for object in object_list %}
+                    <div class="word-row d-flex">
+                        <div class="col col-1"><a href="">{{forloop.counter}}</a></div>
+                        <div class="col col-2">{{object.word.name}}</div>
+                        <div class="col col-3">{{object.family.name}}</div>
+                        <div class="col col-4">{{object.word.definition}}</div>
+                    </div>
+                {% endfor %}
+        </div>
+    </div>
+    <hr>
+    <a href="{% url 'vocabulary:family-create'%}" class="btn-link">Create New Word Family</a>
+{% endblock %}

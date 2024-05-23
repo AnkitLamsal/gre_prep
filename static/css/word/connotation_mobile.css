@@ -1,0 +1,37 @@
+.word-family {
+    padding: 0;
+    margin: 0;
+}
+.words{
+padding:0;
+width:100%;
+margin:0;
+}
+.word-row{
+    width:100%;
+}
+body h1{
+    text-align: center;
+}
+.words h3{
+    text-align: center;
+
+}
+.padding-1{
+    padding:0.2rem !important;
+}
+.col{
+    flex:1;
+    font-size: 1rem;
+    padding:0 !important;
+}
+.col-1{
+    display: none;
+}
+.col-2{
+    width:3rem;
+    margin-right:1rem;
+}
+.col-3{
+    margin-right: 0.5rem;
+}

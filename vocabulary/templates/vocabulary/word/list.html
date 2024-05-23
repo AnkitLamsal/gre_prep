@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h1>Word List</h1>
+    <div class="word-family">
+        {% for object in object_list %}
+            <div class="word-family-item">
+                <h2><a href="#" class="text-decoration-none"> {{forloop.counter}} . </a>{{object.name}}</h2>
+            </div>
+        {% endfor %}
+    </div>
+    <a href="{% url 'vocabulary:family-create'%}" class="btn-link">Create New Word Family</a>
+{% endblock %}

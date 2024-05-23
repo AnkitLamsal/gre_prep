@@ -1,0 +1,16 @@
+.form{
+    margin:2rem;
+    padding:2rem;
+}
+#div_id_name, #div_id_meaning, #div_id_description{
+    padding: 1rem;
+    margin-left:25% !important;
+}
+.btn-submit{
+    padding:0.5rem;
+    margin-left:37.5% !important;
+    width:25%;
+}
+input{
+    padding:0.3rem;
+}
